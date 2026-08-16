@@ -11,12 +11,12 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] flex-col overflow-hidden bg-forest text-cream-text">
       <Image
-        src="/images/hero-family.jpg"
-        alt="A father, mother, and their two children laughing together outdoors"
+        src="/images/hero-family-cropped.jpg"
+        alt="A father, mother, and their daughter laughing together outdoors"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[0%_center]"
+        className="object-cover object-[90%_center]"
       />
       <div
         aria-hidden

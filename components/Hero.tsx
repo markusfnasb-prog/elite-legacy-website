@@ -16,14 +16,14 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[85%_center] sm:object-[75%_center]"
+        className="object-cover object-[100%_center]"
       />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(22,33,27,0.92) 0%, rgba(22,33,27,0.85) 40%, rgba(22,33,27,0.55) 68%, rgba(22,33,27,0.15) 90%), linear-gradient(0deg, rgba(22,33,27,0.7) 0%, rgba(22,33,27,0) 45%)",
+            "linear-gradient(90deg, rgba(22,33,27,0.85) 0%, rgba(22,33,27,0.72) 40%, rgba(22,33,27,0.4) 68%, rgba(22,33,27,0.1) 90%), linear-gradient(0deg, rgba(22,33,27,0.5) 0%, rgba(22,33,27,0) 38%)",
         }}
       />
 
@@ -47,7 +47,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-2xl font-sans text-[clamp(1.9rem,4.6vw,3.1rem)] leading-[1.15] font-extrabold tracking-tight text-cream"
-          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.65), 0 1px 4px rgba(0,0,0,0.5)" }}
+          style={{ textShadow: "0 2px 20px rgba(22,33,27,0.65), 0 1px 4px rgba(22,33,27,0.5)" }}
         >
           Get life insurance today, so your family is never left carrying{" "}
           <span className="font-accent font-normal italic text-sage-bright">
@@ -81,7 +81,7 @@ export default function Hero() {
             Call {PHONE_DISPLAY}
           </PillButton>
           <PillButton href="#book" variant="outline">
-            Book a Time
+            Schedule a Consultation
           </PillButton>
         </motion.div>
       </div>

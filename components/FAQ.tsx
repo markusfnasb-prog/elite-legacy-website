@@ -44,7 +44,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3">
+        <div className="mt-14 flex flex-col gap-3">
           {QUESTIONS.map((item, i) => {
             const isOpen = openIndex === i;
             return (

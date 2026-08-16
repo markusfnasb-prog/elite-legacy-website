@@ -26,14 +26,16 @@ export default function HowItWorks() {
 
         <ol className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-8">
           {STEPS.map((step) => (
-            <li key={step.number} className="text-center sm:text-left">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sage font-sans text-base font-bold text-forest">
-                {step.number}
-              </span>
-              <h3 className="mt-4 font-sans text-lg font-bold text-cream">
+            <li key={step.number}>
+              <div className="flex justify-center">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-sage font-sans text-base font-bold text-forest">
+                  {step.number}
+                </span>
+              </div>
+              <h3 className="mt-4 text-center font-sans text-lg font-bold text-cream sm:text-left">
                 {step.title}
               </h3>
-              <p className="mt-2 text-[0.98rem] leading-relaxed text-cream/70">
+              <p className="mt-2 text-center text-[0.98rem] leading-relaxed text-cream/70 sm:text-left">
                 {step.body}
               </p>
             </li>

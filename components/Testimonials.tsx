@@ -13,7 +13,7 @@ const SAMPLE_TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-forest px-6 py-20 sm:py-24">
+    <section className="bg-forest px-6 py-20 sm:py-28">
       <div className="mx-auto max-w-4xl">
         <p className="text-center font-sans text-xs font-semibold tracking-[0.2em] text-sage-bright uppercase">
           Sample copy — replace with real client stories before launch

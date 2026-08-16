@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { motion } from "framer-motion";
 import PillButton from "./PillButton";
 
 const CALENDLY_URL = "https://calendly.com/elitelegacyinsurancegroup/30min";
@@ -55,7 +56,11 @@ export default function ConversionPanel() {
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.3fr_1fr]">
-          <form
+          <motion.form
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             onSubmit={handleSubmit}
             noValidate
             className="rounded-2xl bg-white p-7 shadow-[var(--shadow-card)] sm:p-9"
@@ -150,10 +155,16 @@ export default function ConversionPanel() {
                 </div>
               </div>
             )}
-          </form>
+          </motion.form>
 
           <div className="flex flex-col gap-6">
-            <div className="rounded-2xl bg-white p-7 shadow-[var(--shadow-card)]">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="rounded-2xl bg-white p-7 shadow-[var(--shadow-card)]"
+            >
               <h3 className="font-sans text-base font-bold text-ink">
                 Call Us
               </h3>
@@ -163,11 +174,17 @@ export default function ConversionPanel() {
               <PillButton href={PHONE_TEL} variant="cream" className="mt-5 w-full !bg-cream-2">
                 {PHONE_DISPLAY}
               </PillButton>
-            </div>
+            </motion.div>
 
-            <div id="book" className="scroll-mt-6 rounded-2xl bg-white p-7 shadow-[var(--shadow-card)]">
+            <motion.div
+              id="book"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className="scroll-mt-6 rounded-2xl bg-white p-7 shadow-[var(--shadow-card)]">
               <h3 className="font-sans text-base font-bold text-ink">
-                Book a Time
+                Schedule a Consultation
               </h3>
               {CALENDLY_URL ? (
                 <div className="mt-4 overflow-hidden rounded-xl">
@@ -196,7 +213,7 @@ export default function ConversionPanel() {
                   </p>
                 </div>
               )}
-            </div>
+            </motion.div>
           </div>
         </div>
 

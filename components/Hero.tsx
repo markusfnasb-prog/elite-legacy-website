@@ -11,19 +11,19 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] flex-col overflow-hidden bg-forest text-cream-text">
       <Image
-        src="/images/hero-family-cropped.jpg"
+        src="/images/hero-family.jpg"
         alt="A father, mother, and their daughter laughing together outdoors"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[78%_center] sm:object-[90%_center]"
+        className="object-cover object-center"
       />
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(22,33,27,0.85) 0%, rgba(22,33,27,0.72) 40%, rgba(22,33,27,0.4) 68%, rgba(22,33,27,0.1) 90%), linear-gradient(0deg, rgba(22,33,27,0.5) 0%, rgba(22,33,27,0) 38%)",
+            "linear-gradient(270deg, rgba(22,33,27,0.85) 0%, rgba(22,33,27,0.72) 40%, rgba(22,33,27,0.4) 68%, rgba(22,33,27,0.1) 90%), linear-gradient(0deg, rgba(22,33,27,0.5) 0%, rgba(22,33,27,0) 38%)",
         }}
       />
 
@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
       </header>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col justify-end px-6 pb-16 sm:px-10 sm:pb-20">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-end justify-end px-6 pb-16 text-right sm:px-10 sm:pb-20">
         <motion.h1
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-8 flex flex-wrap items-center gap-4"
+          className="mt-8 flex flex-wrap items-center justify-end gap-4"
         >
           <PillButton href="#quote" variant="sage">
             Get My Free Quote

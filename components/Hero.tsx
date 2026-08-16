@@ -16,7 +16,7 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[100%_center]"
+        className="object-cover object-[0%_center]"
       />
       <div
         aria-hidden

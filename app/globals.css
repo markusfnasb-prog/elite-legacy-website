@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-accent: var(--font-source-serif), Georgia, serif;
+
+  --color-cream: #faf6ee;
+  --color-cream-2: #f1e9d8;
+  --color-forest: #16211b;
+  --color-forest-2: #1e2b23;
+  --color-sage: #7c9473;
+  --color-sage-bright: #9db594;
+  --color-sage-deep: #4f6349;
+  --color-ink: #262b25;
+  --color-cream-text: #faf6ee;
+
+  --shadow-card: 0 16px 36px -18px rgba(22, 33, 27, 0.28);
+  --shadow-pill: 0 10px 24px -10px rgba(22, 33, 27, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-sage);
+  color: var(--color-cream);
+}
+
+* {
+  scrollbar-color: var(--color-sage-deep) var(--color-cream-2);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage-deep);
+  border-radius: 999px;
+  border: 3px solid var(--color-cream-2);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sage-deep);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
